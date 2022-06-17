@@ -97,33 +97,65 @@ Below are steps with more detailed description of code snippets/commands/etc.
 
 ### Create a new Dataset entity
 
-[TBD]
+This section describes how to create a new dataset in ClearML Server.
+Essentially, a dataset in ClearML Server is just an experiment with the type `"data_processing"`.
+
+However, there is a separate part of ClearML SDK which gives all functionality necessary 
+to work with these experiments as with datasets.
 
 #### CIFAR10
+
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_1_creation.py)
+to the script with dataset creation.
 
 [TBD]
 
 #### MNIST
 
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_1_creation.py)
+to the script with dataset creation.
+
 [TBD]
 
 #### Fashion MNIST
+
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_1_creation.py)
+to the script with dataset creation.
 
 [TBD]
 
 ### Upload data to your dataset
 
-[TBD]
+This section describes how to upload actual data to your dataset.
+
+As in other tools/frameworks, a dataset is just an entity which holds some meta-info about your data.
+
+But you should also actually store your data somewhere.
+
+There are tonnes of data storage options: S3, Azure Blob Storage, Google Storage, FTP Server, HDFS etc.
+
+In this case we have a File Server - the storage component of ClearML Server.
+
+But we can also configure ClearML Server to work with S3/Azure Blob Storage/Google Storage instead of File Server.
 
 #### CIFAR10
+
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_2_data_preparation.py)
+to the script with dataset creation.
 
 [TBD]
 
 #### MNIST
 
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_2_data_preparation.py)
+to the script with dataset creation.
+
 [TBD]
 
 #### Fashion MNIST
+
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_2_data_preparation.py)
+to the script with dataset creation.
 
 [TBD]
 
