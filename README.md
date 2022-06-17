@@ -45,6 +45,15 @@ conda activate clearml_datasets
 
 This section gives an overview of what (and how) you can do with your datasets.
 
+Basically, there are several actions you can do with your data, namely:
+- Create a new Dataset entity;
+- Upload data to your dataset;
+- Add some meta-info about your Dataset;
+- Create a new version of the previous Dataset entity;
+- Compare Datasets.
+
+Below are steps with more detailed description of code snippets/commands/etc.
+
 ### Create a new Dataset entity
 
 [TBD]
@@ -53,7 +62,7 @@ This section gives an overview of what (and how) you can do with your datasets.
 
 [TBD]
 
-### Add some meta-info to your Dataset
+### Add some meta-info about your Dataset
 
 [TBD]
 
