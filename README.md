@@ -77,7 +77,7 @@ Otherwise, you should follow the official CLI setup
 Type the following command in the terminal:
 
 ```shell
-clearml-data search
+clearml-data search --project clearml_datasets
 ```
 
 You should see something like this:
@@ -87,8 +87,6 @@ clearml-data - Dataset Management & Versioning CLI
 Search datasets
 project          | name                             | tags                | created             | id                              
 ----------------------------------------------------------------------------------------------------------------------------------
-ClearML - Nvidia Framework Examples/Clara | Example data                     |                     | 2021-02-14 17:07:24+00:00 | 2a619936b4204f5ebfeefefd66bddf03
-ClearML - Nvidia Framework Examples/TLTv3 | Example Dataset                  |                     | 2021-04-08 06:41:30 | 9751c847f6664f52a096e1264b258fad
 ```
 
 ## How To...
