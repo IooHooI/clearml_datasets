@@ -2,6 +2,8 @@
 
 ## Introduction
 
+![alt text](pics/data_registry_idea.jpeg "Title")
+
 This is a toy example of the project with image datasets stored under ClearML platform.
 
 It contains some of the most popular datasets, namely:
