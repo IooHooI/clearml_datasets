@@ -108,21 +108,135 @@ to work with these experiments as with datasets.
 Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_1_creation.py)
 to the script with dataset creation.
 
-[TBD]
+Here is how you can execute the script:
+
+```shell
+python cifar10/dataset_1_creation.py
+```
+
+After script execution you should see something like this:
+
+```shell
+{'name': 'CIFAR10', 'created': datetime.datetime(2022, 6, 21, 11, 11, 30, 448000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': 'efb893860f554d459bfdf5775c7297ac', 'tags': []}
+```
 
 #### MNIST
 
 Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_1_creation.py)
 to the script with dataset creation.
 
-[TBD]
+Here is how you can execute the script:
+
+```shell
+python mnist/dataset_1_creation.py
+```
+
+After script execution you should see something like this:
+
+```shell
+{'name': 'CIFAR10', 'created': datetime.datetime(2022, 6, 21, 11, 11, 30, 448000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': 'efb893860f554d459bfdf5775c7297ac', 'tags': []}
+{'name': 'MNIST', 'created': datetime.datetime(2022, 6, 21, 11, 11, 49, 844000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': '1427074363534735ba938cbce11d67a4', 'tags': []}
+```
 
 #### Fashion MNIST
 
 Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_1_creation.py)
 to the script with dataset creation.
 
-[TBD]
+Here is how you can execute the script:
+
+```shell
+python fashion_mnist/dataset_1_creation.py
+```
+
+After script execution you should see something like this:
+
+```shell
+{'name': 'CIFAR10', 'created': datetime.datetime(2022, 6, 21, 11, 11, 30, 448000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': 'efb893860f554d459bfdf5775c7297ac', 'tags': []}
+{'name': 'MNIST', 'created': datetime.datetime(2022, 6, 21, 11, 11, 49, 844000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': '1427074363534735ba938cbce11d67a4', 'tags': []}
+{'name': 'FASHION_MNIST', 'created': datetime.datetime(2022, 6, 21, 11, 14, 21, 182000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': '9bec6260e7694a329a21664f8441ff53', 'tags': []}
+```
+
+After these steps are executed your datasets should look like this:
+
+![alt text](pics/datasets_created.png "Title")
+
+### Add some meta-info about your Dataset
+
+This section describes how to add some meta-info about your dataset.
+
+Example: tags (but not only).
+
+Later we also show how to calculate and store some descriptive statistics in your dataset.
+
+#### CIFAR10
+
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_2_meta_info_preparation.py)
+to the script with dataset meta-info creation.
+
+Here is how you can execute the script:
+
+```shell
+python cifar10/dataset_2_meta_info_preparation.py
+```
+
+After script execution you should see something like this:
+
+```shell
+{'name': 'CIFAR10', 'created': datetime.datetime(2022, 6, 21, 11, 11, 30, 448000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': 'efb893860f554d459bfdf5775c7297ac', 'tags': ['classification', 'example', 'image', 'small']}
+{'name': 'MNIST', 'created': datetime.datetime(2022, 6, 21, 11, 11, 49, 844000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': '1427074363534735ba938cbce11d67a4', 'tags': []}
+{'name': 'FASHION_MNIST', 'created': datetime.datetime(2022, 6, 21, 11, 14, 21, 182000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': '9bec6260e7694a329a21664f8441ff53', 'tags': []}
+```
+
+Please take a closer look at tags that were added to the respective dataset.
+
+#### MNIST
+
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_2_meta_info_preparation.py)
+to the script with dataset meta-info creation.
+
+Here is how you can execute the script:
+
+```shell
+python mnist/dataset_2_meta_info_preparation.py
+```
+
+After script execution you should see something like this:
+
+```shell
+{'name': 'CIFAR10', 'created': datetime.datetime(2022, 6, 21, 11, 11, 30, 448000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': 'efb893860f554d459bfdf5775c7297ac', 'tags': ['classification', 'example', 'image', 'small']}
+{'name': 'MNIST', 'created': datetime.datetime(2022, 6, 21, 11, 11, 49, 844000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': '1427074363534735ba938cbce11d67a4', 'tags': ['classification', 'example', 'image', 'small']}
+{'name': 'FASHION_MNIST', 'created': datetime.datetime(2022, 6, 21, 11, 14, 21, 182000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': '9bec6260e7694a329a21664f8441ff53', 'tags': []}
+```
+
+Please take a closer look at tags that were added to the respective dataset.
+
+#### Fashion MNIST
+
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_2_meta_info_preparation.py)
+to the script with dataset meta-info creation.
+
+Here is how you can execute the script:
+
+```shell
+python fashion_mnist/dataset_2_meta_info_preparation.py
+```
+
+After script execution you should see something like this:
+
+```shell
+{'name': 'CIFAR10', 'created': datetime.datetime(2022, 6, 21, 11, 11, 30, 448000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': 'efb893860f554d459bfdf5775c7297ac', 'tags': ['classification', 'example', 'image', 'small']}
+{'name': 'MNIST', 'created': datetime.datetime(2022, 6, 21, 11, 11, 49, 844000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': '1427074363534735ba938cbce11d67a4', 'tags': ['classification', 'example', 'image', 'small']}
+{'name': 'FASHION_MNIST', 'created': datetime.datetime(2022, 6, 21, 11, 14, 21, 182000, tzinfo=tzutc()), 'project': 'clearml_datasets', 'id': '9bec6260e7694a329a21664f8441ff53', 'tags': ['classification', 'example', 'image', 'small']}
+```
+
+Please take a closer look at tags that were added to the respective dataset.
+
+After these steps are executed your datasets should look like this:
+
+![alt text](pics/datasets_meta_info_created.png "Title")
+
+Of course these tags can be used to filter datasets you need.
 
 ### Upload data to your dataset
 
@@ -140,38 +254,22 @@ But we can also configure ClearML Server to work with S3/Azure Blob Storage/Goog
 
 #### CIFAR10
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_2_data_preparation.py)
-to the script with dataset creation.
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_3_data_preparation.py)
+to the script with actual data uploading.
 
 [TBD]
 
 #### MNIST
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_2_data_preparation.py)
-to the script with dataset creation.
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_3_data_preparation.py)
+to the script with actual data uploading.
 
 [TBD]
 
 #### Fashion MNIST
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_2_data_preparation.py)
-to the script with dataset creation.
-
-[TBD]
-
-### Add some meta-info about your Dataset
-
-[TBD]
-
-#### CIFAR10
-
-[TBD]
-
-#### MNIST
-
-[TBD]
-
-#### Fashion MNIST
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_3_data_preparation.py)
+to the script with actual data uploading.
 
 [TBD]
 
