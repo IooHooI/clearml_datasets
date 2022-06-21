@@ -7,9 +7,9 @@
 This is a toy example of the project with image datasets stored under ClearML platform.
 
 It contains some of the most popular datasets, namely:
-- CIDFAR10;
-- MNIST;
-- Fashion MNIST.
+- CIDFAR10 ([link](https://www.cs.toronto.edu/~kriz/cifar.html) to the original page);
+- MNIST ([link](http://yann.lecun.com/exdb/mnist/) to the original page);
+- Fashion MNIST ([link](https://github.com/zalandoresearch/fashion-mnist#get-the-data) to the original page).
 - etc (#todo: add more datasets).
 
 Each package contains the code which:
