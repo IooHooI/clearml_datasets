@@ -2,14 +2,12 @@
 
 ## Introduction
 
-![alt text](https://424531.selcdn.ru/efim-test-clearml-bucket/images/data_registry_idea.jpeg "Title")
-
 This is a toy example of the project with image datasets stored under ClearML platform.
 
 It contains some of the most popular datasets, namely:
-- CIDFAR10 ([link](https://www.cs.toronto.edu/~kriz/cifar.html) to the original page);
-- MNIST ([link](http://yann.lecun.com/exdb/mnist/) to the original page);
-- Fashion MNIST ([link](https://github.com/zalandoresearch/fashion-mnist#get-the-data) to the original page).
+- CIDFAR10;
+- MNIST;
+- Fashion MNIST.
 - etc (#todo: add more datasets).
 
 Each package contains the code which:
@@ -41,12 +39,8 @@ cd clearml_datasets
 
 ### Step 3: Create a conda environment from environment.yaml file
 
-If conda is not installed on your machine you can just download Miniconda from [this](https://docs.conda.io/en/latest/miniconda.html) page and install it.
-
-After installation is complete you can restart the terminal and then run this command:
-
 ```shell
-conda env create --file environment.yml
+conda create python=3.8 --file environment.yaml
 ```
 
 ### Step 4: Activate an environment
@@ -78,78 +72,6 @@ Please, **MAKE SURE** that this `clearml.conf` file is pointed to the right Clea
 Otherwise, you should follow the official CLI setup
 [documentation](https://clear.ml/docs/latest/docs/getting_started/ds/ds_first_steps#connect-clearml-sdk-to-the-server).
 
-### Step 5* (Optional): Check connection to your S3-storage
-
-By default `clearml.conf` is generated without any information about S3 buckets.
-
-It is possible, however, to direct all data input/output activities to some S3 bucket.
-
-There are three parts in `clearml.conf` that you can change to configure your ClearML instance to work with S3.
-
-First, you can edit `files_server`:
-```yaml
-# ClearML SDK configuration file
-...
-api {
-    # Notice: 'host' is the api server (default port 8008), not the web server.
-    api_server: https://api.bla.bla.bla.bla.ru
-    web_server: https://app.bla.bla.bla.bla.ru
-        
-    # THIS IS THE FIRST PART
-    files_server: s3://<YOUR S3 ENDPOINT>[:<YOUR PORT>]/<YOUR S3 BUCKET>
-    
-    # Credentials are generated using the webapp, https://app.bla.bla.bla.bla.ru/settings
-    # Override with os environment: CLEARML_API_ACCESS_KEY / CLEARML_API_SECRET_KEY
-    credentials {"access_key": "BLA", "secret_key": "BLA"}
-}
-...
-```
-
-Second, you can add `S3 credentials`:
-```yaml
-...
-sdk {
-...
-  aws {
-        # THIS IS THE SECOND PART
-        s3 {
-            host: "<YOUR S3 ENDPOINT>[:<YOUR PORT>]"
-            key: "<YOUR S3 ACCESS KEY>"
-            region: "<YOUR S3 REGION>"
-            secret: "<YOUR S3 SECRET KEY>"
-            use_credentials_chain: false
-            credentials: [{
-                bucket: "<YOUR S3 BUCKET>"
-                secure: true
-            }]
-        }
-        boto3 {
-            pool_connections: 512
-            max_multipart_concurrency: 16
-        }
-    }
-...
-}
-...
-```
-
-And third, you can define `default output url`:
-```yaml
-...
-development {
-    ...
-    
-    # Default Task output_uri. if output_uri is not provided to Task.init, default_output_uri will be used instead.,
-    # AND THIS IS THE THIRD PART
-    default_output_uri: "s3://<YOUR S3 ENDPOINT>[:<YOUR PORT>]/<YOUR S3 BUCKET>/<YOUR>/<PATH>",
-    ...
-}
-...
-```
-
-If you do not provide the second part, then the first and the third parts will be useless, so pay close attention to that.
-
-
 ### Step 6: Check Datasets in clearml_datasets project
 
 Type the following command in the terminal:
@@ -166,16 +88,6 @@ Search datasets
 project          | name                             | tags                | created             | id                              
 ----------------------------------------------------------------------------------------------------------------------------------
 ```
-
-Or if you haven't created the project `clearml_datasets` before then you'll see something like this:
-
-```shell
-clearml-data - Dataset Management & Versioning CLI
-Search datasets
-
-Error: No projects found when searching for `clearml_datasets`
-```
-
 
 ## How To...
 
@@ -199,7 +111,7 @@ to the script with dataset creation.
 Here is how you can execute the script:
 
 ```shell
-python dataset_1_creation.py
+python cifar10/dataset_1_creation.py
 ```
 
 After script execution you should see something like this:
@@ -216,7 +128,7 @@ to the script with dataset creation.
 Here is how you can execute the script:
 
 ```shell
-python dataset_1_creation.py
+python mnist/dataset_1_creation.py
 ```
 
 After script execution you should see something like this:
@@ -234,7 +146,7 @@ to the script with dataset creation.
 Here is how you can execute the script:
 
 ```shell
-python dataset_1_creation.py
+python fashion_mnist/dataset_1_creation.py
 ```
 
 After script execution you should see something like this:
@@ -247,7 +159,7 @@ After script execution you should see something like this:
 
 After these steps are executed your datasets should look like this:
 
-![alt text](https://424531.selcdn.ru/efim-test-clearml-bucket/images/datasets_created.png "Title")
+![alt text](pics/datasets_created.png "Title")
 
 ### Add some meta-info about your Dataset
 
@@ -265,7 +177,7 @@ to the script with dataset meta-info creation.
 Here is how you can execute the script:
 
 ```shell
-python dataset_2_meta_info_preparation.py
+python cifar10/dataset_2_meta_info_preparation.py
 ```
 
 After script execution you should see something like this:
@@ -286,7 +198,7 @@ to the script with dataset meta-info creation.
 Here is how you can execute the script:
 
 ```shell
-python dataset_2_meta_info_preparation.py
+python mnist/dataset_2_meta_info_preparation.py
 ```
 
 After script execution you should see something like this:
@@ -307,7 +219,7 @@ to the script with dataset meta-info creation.
 Here is how you can execute the script:
 
 ```shell
-python dataset_2_meta_info_preparation.py
+python fashion_mnist/dataset_2_meta_info_preparation.py
 ```
 
 After script execution you should see something like this:
@@ -322,7 +234,7 @@ Please take a closer look at tags that were added to the respective dataset.
 
 After these steps are executed your datasets should look like this:
 
-![alt text](https://424531.selcdn.ru/efim-test-clearml-bucket/images/datasets_meta_info_created.png "Title")
+![alt text](pics/datasets_meta_info_created.png "Title")
 
 Of course these tags can be used to filter datasets you need.
 
@@ -345,82 +257,21 @@ But we can also configure ClearML Server to work with S3/Azure Blob Storage/Goog
 Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_3_data_preparation.py)
 to the script with actual data uploading.
 
-Here is how you can execute the script:
-
-```shell
-python dataset_3_data_preparation.py
-```
-
-Once you run the script you should see something like this:
-
-```shell
-Add data/train/9/lorry_s_002104.png/lorry_s_002104.png
-Add data/train/9/camion_s_000265.png/camion_s_000265.png
-Add data/train/9/truck_s_002066.png/truck_s_002066.png
-Add data/train/9/tow_truck_s_000968.png/tow_truck_s_000968.png
-Add data/train/9/fire_truck_s_001749.png/fire_truck_s_001749.png
-Add data/train/9/dump_truck_s_000934.png/dump_truck_s_000934.png
-Add data/train/9/lorry_s_000085.png/lorry_s_000085.png
-Add data/train/9/sound_truck_s_000508.png/sound_truck_s_000508.png
-...
-```
+[TBD]
 
 #### MNIST
 
 Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_3_data_preparation.py)
 to the script with actual data uploading.
 
-Here is how you can execute the script:
-
-```shell
-cd mnist_code && python dataset_3_data_preparation.py && cd ..
-```
-
-Once you run the script you should see something like this:
-
-```shell
-Add data/train/train-images-idx3-ubyte
-Add data/train/train-labels-idx1-ubyte
-Compressing /root/clearml_datasets/mnist_code/../tmp/mnist/train-images-idx3-ubyte
-Compressing /root/clearml_datasets/mnist_code/../tmp/mnist/train-labels-idx1-ubyte
-Uploading dataset changes (2 files compressed to 26.47 MB) to https://files.testing.cmlp.rpd.trampampam.org
-File compression and upload completed: total size 26.47 MB, 1 chunked stored (average size 26.47 MB)
-2022-06-22 12:25:06,086 - clearml.Task - INFO - Waiting to finish uploads
-2022-06-22 12:25:06,112 - clearml.Task - INFO - Finished uploading
-```
+[TBD]
 
 #### Fashion MNIST
 
 Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_3_data_preparation.py)
 to the script with actual data uploading.
 
-Here is how you can execute the script:
-
-```shell
-cd fashion_mnist_code && python dataset_3_data_preparation.py && cd ..
-```
-
-Once you run the script you should see something like this:
-
-```shell
-Add data/train/train-images-idx3-ubyte
-Add data/train/train-labels-idx1-ubyte
-Compressing /root/clearml_datasets/fashion_mnist_code/../tmp/fashion_mnist/train-images-idx3-ubyte
-Compressing /root/clearml_datasets/fashion_mnist_code/../tmp/fashion_mnist/train-labels-idx1-ubyte
-Uploading dataset changes (2 files compressed to 26.47 MB) to https://files.testing.cmlp.rpd.trampampam.org
-File compression and upload completed: total size 26.47 MB, 1 chunked stored (average size 26.47 MB)
-2022-06-22 12:25:06,086 - clearml.Task - INFO - Waiting to finish uploads
-2022-06-22 12:25:06,112 - clearml.Task - INFO - Finished uploading
-```
-
-After these steps are executed your datasets should look like this:
-
-![alt text](https://424531.selcdn.ru/efim-test-clearml-bucket/images/datasets_data_uploaded.png "Title")
-
-Here is how data is uploaded:
-
-![alt text]( "Title")
-
+[TBD]
 
 ### Create a new version of the previous Dataset entity
 
