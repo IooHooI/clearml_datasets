@@ -10,7 +10,6 @@ if __name__ == "__main__":
 
     cifar10_dataset.add_files(
         path='../tmp/cifar10/train',
-        local_base_folder='data/train',
         dataset_path='data/train',
         verbose=True
     )
