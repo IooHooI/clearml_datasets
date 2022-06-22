@@ -2,7 +2,7 @@
 
 ## Introduction
 
-![alt text](pics/data_registry_idea.jpeg "Title")
+![alt text](https://424531.selcdn.ru/efim-test-clearml-bucket/images/data_registry_idea.jpeg "Title")
 
 This is a toy example of the project with image datasets stored under ClearML platform.
 
@@ -175,7 +175,7 @@ After script execution you should see something like this:
 
 After these steps are executed your datasets should look like this:
 
-![alt text](pics/datasets_created.png "Title")
+![alt text](https://424531.selcdn.ru/efim-test-clearml-bucket/images/datasets_created.png "Title")
 
 ### Add some meta-info about your Dataset
 
@@ -250,7 +250,7 @@ Please take a closer look at tags that were added to the respective dataset.
 
 After these steps are executed your datasets should look like this:
 
-![alt text](pics/datasets_meta_info_created.png "Title")
+![alt text](https://424531.selcdn.ru/efim-test-clearml-bucket/images/datasets_meta_info_created.png "Title")
 
 Of course these tags can be used to filter datasets you need.
 
