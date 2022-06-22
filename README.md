@@ -95,6 +95,16 @@ project          | name                             | tags                | crea
 ----------------------------------------------------------------------------------------------------------------------------------
 ```
 
+Or if you haven't created the project `clearml_datasets` before then you'll see something like this:
+
+```shell
+clearml-data - Dataset Management & Versioning CLI
+Search datasets
+
+Error: No projects found when searching for `clearml_datasets`
+```
+
+
 ## How To...
 
 This section gives an overview of what (and how) you can do with your datasets.
@@ -117,7 +127,7 @@ to the script with dataset creation.
 Here is how you can execute the script:
 
 ```shell
-python cifar10/dataset_1_creation.py
+cd cifar10 && python dataset_1_creation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -134,7 +144,7 @@ to the script with dataset creation.
 Here is how you can execute the script:
 
 ```shell
-python mnist/dataset_1_creation.py
+cd mnist && python dataset_1_creation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -152,7 +162,7 @@ to the script with dataset creation.
 Here is how you can execute the script:
 
 ```shell
-python fashion_mnist/dataset_1_creation.py
+cd fashion_mnist && python dataset_1_creation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -183,7 +193,7 @@ to the script with dataset meta-info creation.
 Here is how you can execute the script:
 
 ```shell
-python cifar10/dataset_2_meta_info_preparation.py
+cd cifar10 && python dataset_2_meta_info_preparation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -204,7 +214,7 @@ to the script with dataset meta-info creation.
 Here is how you can execute the script:
 
 ```shell
-python mnist/dataset_2_meta_info_preparation.py
+cd mnist && python dataset_2_meta_info_preparation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -225,7 +235,7 @@ to the script with dataset meta-info creation.
 Here is how you can execute the script:
 
 ```shell
-python fashion_mnist/dataset_2_meta_info_preparation.py
+cd fashion_mnist && python dataset_2_meta_info_preparation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -266,10 +276,22 @@ to the script with actual data uploading.
 Here is how you can execute the script:
 
 ```shell
-python cifar10/dataset_3_data_preparation.py
+cd cifar10 && python dataset_3_data_preparation.py && cd ..
 ```
 
-[TBD]
+Once you run the script you should see something like this:
+
+```shell
+Add data/train/9/lorry_s_002104.png/lorry_s_002104.png
+Add data/train/9/camion_s_000265.png/camion_s_000265.png
+Add data/train/9/truck_s_002066.png/truck_s_002066.png
+Add data/train/9/tow_truck_s_000968.png/tow_truck_s_000968.png
+Add data/train/9/fire_truck_s_001749.png/fire_truck_s_001749.png
+Add data/train/9/dump_truck_s_000934.png/dump_truck_s_000934.png
+Add data/train/9/lorry_s_000085.png/lorry_s_000085.png
+Add data/train/9/sound_truck_s_000508.png/sound_truck_s_000508.png
+...
+```
 
 #### MNIST
 
@@ -279,7 +301,7 @@ to the script with actual data uploading.
 Here is how you can execute the script:
 
 ```shell
-python mnist/dataset_3_data_preparation.py
+cd mnist && python dataset_3_data_preparation.py && cd ..
 ```
 
 [TBD]
@@ -292,7 +314,7 @@ to the script with actual data uploading.
 Here is how you can execute the script:
 
 ```shell
-python fashion_mnist/dataset_3_data_preparation.py
+cd fashion_mnist && python dataset_3_data_preparation.py && cd ..
 ```
 
 [TBD]
