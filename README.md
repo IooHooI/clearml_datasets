@@ -41,6 +41,10 @@ cd clearml_datasets
 
 ### Step 3: Create a conda environment from environment.yaml file
 
+If conda is not installed on your machine you can just download Miniconda from [this](https://docs.conda.io/en/latest/miniconda.html) page and install it.
+
+After installation is complete you can restart the terminal and then run this command:
+
 ```shell
 conda create python=3.8 --file environment.yaml
 ```
