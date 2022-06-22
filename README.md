@@ -127,7 +127,7 @@ to the script with dataset creation.
 Here is how you can execute the script:
 
 ```shell
-cd cifar10 && python dataset_1_creation.py && cd ..
+cd cifar10_code && python dataset_1_creation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -144,7 +144,7 @@ to the script with dataset creation.
 Here is how you can execute the script:
 
 ```shell
-cd mnist && python dataset_1_creation.py && cd ..
+cd mnist_code && python dataset_1_creation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -162,7 +162,7 @@ to the script with dataset creation.
 Here is how you can execute the script:
 
 ```shell
-cd fashion_mnist && python dataset_1_creation.py && cd ..
+cd fashion_mnist_code && python dataset_1_creation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -193,7 +193,7 @@ to the script with dataset meta-info creation.
 Here is how you can execute the script:
 
 ```shell
-cd cifar10 && python dataset_2_meta_info_preparation.py && cd ..
+cd cifar10_code && python dataset_2_meta_info_preparation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -214,7 +214,7 @@ to the script with dataset meta-info creation.
 Here is how you can execute the script:
 
 ```shell
-cd mnist && python dataset_2_meta_info_preparation.py && cd ..
+cd mnist_code && python dataset_2_meta_info_preparation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -235,7 +235,7 @@ to the script with dataset meta-info creation.
 Here is how you can execute the script:
 
 ```shell
-cd fashion_mnist && python dataset_2_meta_info_preparation.py && cd ..
+cd fashion_mnist_code && python dataset_2_meta_info_preparation.py && cd ..
 ```
 
 After script execution you should see something like this:
@@ -276,7 +276,7 @@ to the script with actual data uploading.
 Here is how you can execute the script:
 
 ```shell
-cd cifar10 && python dataset_3_data_preparation.py && cd ..
+cd cifar10_code && python dataset_3_data_preparation.py && cd ..
 ```
 
 Once you run the script you should see something like this:
@@ -301,7 +301,7 @@ to the script with actual data uploading.
 Here is how you can execute the script:
 
 ```shell
-cd mnist && python dataset_3_data_preparation.py && cd ..
+cd mnist_code && python dataset_3_data_preparation.py && cd ..
 ```
 
 [TBD]
@@ -314,7 +314,7 @@ to the script with actual data uploading.
 Here is how you can execute the script:
 
 ```shell
-cd fashion_mnist && python dataset_3_data_preparation.py && cd ..
+cd fashion_mnist_code && python dataset_3_data_preparation.py && cd ..
 ```
 
 [TBD]
