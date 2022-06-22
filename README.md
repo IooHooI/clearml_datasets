@@ -263,6 +263,12 @@ But we can also configure ClearML Server to work with S3/Azure Blob Storage/Goog
 Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_3_data_preparation.py)
 to the script with actual data uploading.
 
+Here is how you can execute the script:
+
+```shell
+python cifar10/dataset_3_data_preparation.py
+```
+
 [TBD]
 
 #### MNIST
@@ -270,12 +276,24 @@ to the script with actual data uploading.
 Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_3_data_preparation.py)
 to the script with actual data uploading.
 
+Here is how you can execute the script:
+
+```shell
+python mnist/dataset_3_data_preparation.py
+```
+
 [TBD]
 
 #### Fashion MNIST
 
 Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_3_data_preparation.py)
 to the script with actual data uploading.
+
+Here is how you can execute the script:
+
+```shell
+python fashion_mnist/dataset_3_data_preparation.py
+```
 
 [TBD]
 
