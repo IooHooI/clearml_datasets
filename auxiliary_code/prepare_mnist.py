@@ -13,6 +13,7 @@ def uncompress_file(root_path, from_file, to_file):
 
 if __name__ == "__main__":
     root_path = '../tmp/mnist'
+
     if not os.path.exists(os.path.join(root_path, 't10k-images-idx3-ubyte')):
         uncompress_file(root_path, 't10k-images-idx3-ubyte.gz', 't10k-images-idx3-ubyte')
     if not os.path.exists(os.path.join(root_path, 't10k-labels-idx1-ubyte')):
