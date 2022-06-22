@@ -16,14 +16,6 @@ if __name__ == "__main__":
                 verbose=True
             )
 
-    for address, dirs, files in os.walk('../tmp/cifar10/test'):
-        for name in files:
-            cifar10_dataset.add_files(
-                path=os.path.join(address, name),
-                dataset_path=os.path.join('data', '/'.join(address.split('/')[-2:]), name),
-                verbose=True
-            )
-
     Dataset.upload(
         cifar10_dataset,
         verbose=True
