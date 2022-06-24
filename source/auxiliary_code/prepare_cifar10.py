@@ -23,10 +23,10 @@ if __name__ == "__main__":
         "../tmp/cifar10/cifar-10-batches-py/data_batch_5"
     ]
 
-    if not os.path.exists("../tmp/cifar10/train"):
-        os.mkdir("../tmp/cifar10/train")
-    if not os.path.exists("../tmp/cifar10/test"):
-        os.mkdir("../tmp/cifar10/test")
+    if not os.path.exists("../../tmp/cifar10/train"):
+        os.mkdir("../../tmp/cifar10/train")
+    if not os.path.exists("../../tmp/cifar10/test"):
+        os.mkdir("../../tmp/cifar10/test")
 
     for batch_path in train_batches:
         batch = unpickle(batch_path)

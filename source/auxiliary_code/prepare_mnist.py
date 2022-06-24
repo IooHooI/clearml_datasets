@@ -12,7 +12,7 @@ def uncompress_file(root_path, from_file, to_file):
 
 
 if __name__ == "__main__":
-    root_path = '../tmp/mnist'
+    root_path = '../../tmp/mnist'
 
     if not os.path.exists(os.path.join(root_path, 't10k-images-idx3-ubyte')):
         uncompress_file(root_path, 't10k-images-idx3-ubyte.gz', 't10k-images-idx3-ubyte')
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     if not os.path.exists(os.path.join(root_path, 'train-labels-idx1-ubyte')):
         uncompress_file(root_path, 'train-labels-idx1-ubyte.gz', 'train-labels-idx1-ubyte')
 
-    mnist_data = MNIST('../tmp/mnist')
+    mnist_data = MNIST('../../tmp/mnist')
 
     train_images, train_labels = mnist_data.load_training()
     # or
