@@ -304,7 +304,18 @@ Here is how you can execute the script:
 cd mnist_code && python dataset_3_data_preparation.py && cd ..
 ```
 
-[TBD]
+Once you run the script you should see something like this:
+
+```shell
+Add data/train/train-images-idx3-ubyte
+Add data/train/train-labels-idx1-ubyte
+Compressing /root/clearml_datasets/mnist_code/../tmp/mnist/train-images-idx3-ubyte
+Compressing /root/clearml_datasets/mnist_code/../tmp/mnist/train-labels-idx1-ubyte
+Uploading dataset changes (2 files compressed to 26.47 MB) to https://files.testing.ulala.achacha.selectel.org
+File compression and upload completed: total size 26.47 MB, 1 chunked stored (average size 26.47 MB)
+2022-06-22 12:25:06,086 - clearml.Task - INFO - Waiting to finish uploads
+2022-06-22 12:25:06,112 - clearml.Task - INFO - Finished uploading
+```
 
 #### Fashion MNIST
 
@@ -317,7 +328,27 @@ Here is how you can execute the script:
 cd fashion_mnist_code && python dataset_3_data_preparation.py && cd ..
 ```
 
-[TBD]
+Once you run the script you should see something like this:
+
+```shell
+Add data/train/train-images-idx3-ubyte
+Add data/train/train-labels-idx1-ubyte
+Compressing /root/clearml_datasets/fashion_mnist_code/../tmp/fashion_mnist/train-images-idx3-ubyte
+Compressing /root/clearml_datasets/fashion_mnist_code/../tmp/fashion_mnist/train-labels-idx1-ubyte
+Uploading dataset changes (2 files compressed to 26.47 MB) to https://files.testing.ulala.achacha.selectel.org
+File compression and upload completed: total size 26.47 MB, 1 chunked stored (average size 26.47 MB)
+2022-06-22 12:25:06,086 - clearml.Task - INFO - Waiting to finish uploads
+2022-06-22 12:25:06,112 - clearml.Task - INFO - Finished uploading
+```
+
+After these steps are executed your datasets should look like this:
+
+![alt text](https://424531.selcdn.ru/efim-test-clearml-bucket/images/datasets_data_uploaded.png "Title")
+
+Here is how data is uploaded:
+
+![alt text]( "Title")
+
 
 ### Create a new version of the previous Dataset entity
 
