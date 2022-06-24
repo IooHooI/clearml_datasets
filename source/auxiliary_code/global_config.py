@@ -1,7 +1,7 @@
 import os
 
 
-DATASET_PROJECT = 'some_demo'
+DATASET_PROJECT = 'clearml_demo/clearml_datasets'
 ROOT_PROJECT_NAME = 'clearml_datasets'
 TEMP_DATA_PATH = 'tmp'
 
