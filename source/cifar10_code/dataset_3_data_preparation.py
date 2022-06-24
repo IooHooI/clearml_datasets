@@ -19,3 +19,5 @@ if __name__ == "__main__":
     )
 
     Dataset.upload(cifar10_dataset, verbose=True)
+
+    cifar10_dataset.finalize()
