@@ -119,7 +119,7 @@ sdk {
             secret: "<YOUR S3 SECRET KEY>"
             use_credentials_chain: false
             credentials: [{
-                bucket: "YOUR S3 BUCKET"
+                bucket: "<YOUR S3 BUCKET>"
                 secure: true
             }]
         }
