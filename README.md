@@ -78,6 +78,78 @@ Please, **MAKE SURE** that this `clearml.conf` file is pointed to the right Clea
 Otherwise, you should follow the official CLI setup
 [documentation](https://clear.ml/docs/latest/docs/getting_started/ds/ds_first_steps#connect-clearml-sdk-to-the-server).
 
+### Step 5* (Optional): Check connection to your S3-storage
+
+By default `clearml.conf` is generated without any information about S3 buckets.
+
+It is possible, however, to direct all data input/output activities to some S3 bucket.
+
+There are three parts in `clearml.conf` that you can change to configure your ClearML instance to work with S3.
+
+First, you can edit `files_server`:
+```json
+# ClearML SDK configuration file
+...
+api {
+    # Notice: 'host' is the api server (default port 8008), not the web server.
+    api_server: https://api.bla.bla.bla.bla.ru
+    web_server: https://app.bla.bla.bla.bla.ru
+        
+    # THIS IS THE FIRST PART
+    files_server: s3://<YOUR S3 ENDPOINT>[:<YOUR PORT>]/<YOUR S3 BUCKET>
+    
+    # Credentials are generated using the webapp, https://app.bla.bla.bla.bla.ru/settings
+    # Override with os environment: CLEARML_API_ACCESS_KEY / CLEARML_API_SECRET_KEY
+    credentials {"access_key": "BLA", "secret_key": "BLA"}
+}
+...
+```
+
+Second, you can add `S3 credentials`:
+```json
+...
+sdk {
+...
+  aws {
+        # THIS IS THE SECOND PART
+        s3 {
+            host: "<YOUR S3 ENDPOINT>[:<YOUR PORT>]"
+            key: "<YOUR S3 ACCESS KEY>"
+            region: "<YOUR S3 REGION>"
+            secret: "<YOUR S3 SECRET KEY>"
+            use_credentials_chain: false
+            credentials: [{
+                bucket: "YOUR S3 BUCKET"
+                secure: true
+            }]
+        }
+        boto3 {
+            pool_connections: 512
+            max_multipart_concurrency: 16
+        }
+    }
+...
+}
+...
+```
+
+And third, you can define `default output url`:
+```json
+...
+development {
+    ...
+    
+    # Default Task output_uri. if output_uri is not provided to Task.init, default_output_uri will be used instead.,
+    # AND THIS IS THE THIRD PART
+    default_output_uri: "s3://<YOUR S3 ENDPOINT>[:<YOUR PORT>]/<YOUR S3 BUCKET>/<YOUR>/<PATH>",
+    ...
+}
+...
+```
+
+If you do not provide the second part, then the first and the third parts will be useless, so pay close attention to that.
+
+
 ### Step 6: Check Datasets in clearml_datasets project
 
 Type the following command in the terminal:
