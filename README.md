@@ -87,7 +87,7 @@ It is possible, however, to direct all data input/output activities to some S3 b
 There are three parts in `clearml.conf` that you can change to configure your ClearML instance to work with S3.
 
 First, you can edit `files_server`:
-```json
+```yaml
 # ClearML SDK configuration file
 ...
 api {
@@ -106,7 +106,7 @@ api {
 ```
 
 Second, you can add `S3 credentials`:
-```json
+```yaml
 ...
 sdk {
 ...
@@ -134,7 +134,7 @@ sdk {
 ```
 
 And third, you can define `default output url`:
-```json
+```yaml
 ...
 development {
     ...
