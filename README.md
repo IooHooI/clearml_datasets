@@ -193,7 +193,7 @@ to work with these experiments as with datasets.
 
 #### CIFAR10
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_1_creation.py)
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/cifar10_code/dataset_1_creation.py)
 to the script with dataset creation.
 
 Here is how you can execute the script:
@@ -210,7 +210,7 @@ After script execution you should see something like this:
 
 #### MNIST
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_1_creation.py)
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/mnist_code/dataset_1_creation.py)
 to the script with dataset creation.
 
 Here is how you can execute the script:
@@ -228,7 +228,7 @@ After script execution you should see something like this:
 
 #### Fashion MNIST
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_1_creation.py)
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/fashion_mnist_code/dataset_1_creation.py)
 to the script with dataset creation.
 
 Here is how you can execute the script:
@@ -259,7 +259,7 @@ Later we also show how to calculate and store some descriptive statistics in you
 
 #### CIFAR10
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_2_meta_info_preparation.py)
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/cifar10_code/dataset_2_meta_info_preparation.py)
 to the script with dataset meta-info creation.
 
 Here is how you can execute the script:
@@ -280,7 +280,7 @@ Please take a closer look at tags that were added to the respective dataset.
 
 #### MNIST
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_2_meta_info_preparation.py)
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/mnist_code/dataset_2_meta_info_preparation.py)
 to the script with dataset meta-info creation.
 
 Here is how you can execute the script:
@@ -301,7 +301,7 @@ Please take a closer look at tags that were added to the respective dataset.
 
 #### Fashion MNIST
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_2_meta_info_preparation.py)
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/fashion_mnist_code/dataset_2_meta_info_preparation.py)
 to the script with dataset meta-info creation.
 
 Here is how you can execute the script:
@@ -342,7 +342,7 @@ But we can also configure ClearML Server to work with S3/Azure Blob Storage/Goog
 
 #### CIFAR10
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/cifar10/dataset_3_data_preparation.py)
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/cifar10_code/dataset_3_data_preparation.py)
 to the script with actual data uploading.
 
 Here is how you can execute the script:
@@ -367,7 +367,7 @@ Add data/train/9/sound_truck_s_000508.png/sound_truck_s_000508.png
 
 #### MNIST
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/mnist/dataset_3_data_preparation.py)
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/mnist_code/dataset_3_data_preparation.py)
 to the script with actual data uploading.
 
 Here is how you can execute the script:
@@ -391,7 +391,7 @@ File compression and upload completed: total size 26.47 MB, 1 chunked stored (av
 
 #### Fashion MNIST
 
-Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/fashion_mnist/dataset_3_data_preparation.py)
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/fashion_mnist_code/dataset_3_data_preparation.py)
 to the script with actual data uploading.
 
 Here is how you can execute the script:
