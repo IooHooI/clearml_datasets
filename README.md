@@ -183,6 +183,31 @@ This section gives an overview of what (and how) you can do with your datasets.
 
 Below are steps with more detailed description of code snippets/commands/etc.
 
+### Prepare data
+
+Before you run examples above you need to download CIFAR10/MNIST/Fashion MNIST datasets and prepare them accordingly.
+
+Here are examples of commands that help you do it
+
+#### CIFAR10
+
+Here is the [link](https://github.com/IooHooI/clearml_datasets/blob/main/source/auxiliary_code/prepare_cifar10.py)
+to the script with dataset creation.
+
+Here is how you can execute the script:
+
+```shell
+python -m source.auxiliary_code.prepare_cifar10
+```
+
+#### MNIST
+
+[TBD]
+
+#### Fashion MNIST
+
+[TBD]
+
 ### Create a new Dataset entity
 
 This section describes how to create a new dataset in ClearML Server.
@@ -420,7 +445,6 @@ After these steps are executed your datasets should look like this:
 Here is how data is uploaded:
 
 ![alt text]( "Title")
-
 
 ### Create a new version of the previous Dataset entity
 
